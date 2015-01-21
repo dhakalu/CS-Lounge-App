@@ -16,6 +16,13 @@ class TutorSeesion(db.Model):
                         )
                         
     @classmethod
-    def by_id(cls, sessionid):
-      return TutorSession.
+    def by_id(cls, session_id):
+      return TutorSession.get_by_id(session_id)
       
+    @classmethod
+    def by_tutor(cls, tutor):
+      return TutorSession.all().filter('tutor =', tutor)
+      
+    @classmethod
+    def by_subject(cls, subject):
+      return TutorSession.all().filter('subject =', subject)
