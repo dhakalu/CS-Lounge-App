@@ -1,0 +1,39 @@
+nav {
+  background-color: #4CAF50;
+  box-shadow: 2px 2px 5px rgba(33, 33, 33, .4);
+}
+
+nav ul, nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  font-size: 1.5em;
+  list-style-type: none;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  text-align: center;
+}
+
+nav ul li {
+  border-right: 1px solid white;
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+nav ul li:last-child {
+  border: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:active, nav ul li a:hover {
+  text-decoration: underline;
+}
