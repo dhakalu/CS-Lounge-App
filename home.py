@@ -16,9 +16,11 @@ class Handler(base.Handler):
       output_json['status'] = 'ERR'
       output_json['error'] = 'All the fields are required fields.'
     else:
-      tables.TutorSession.create(subject=subject,
+      session = tables.TutorSession.create_session(subject=subject,
                                  tutor=tutor,
                                  time=time,
                                  location=location
                                  )
-                                 
+      session.put()
+      output_josn['status'] = 'OK'
+    self.render_json(json.dumps(output_json))
